@@ -29,7 +29,7 @@
 
   // Smooth scroll for the navigation and links with .scrollto classes
   $('.main-nav a, .mobile-nav a, .scrollto').on('click', function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
       if (target.length) {
         var top_space = 0;
@@ -44,7 +44,7 @@
 
         $('html, body').animate({
           scrollTop: target.offset().top - top_space
-        }, 1500, 'easeInOutExpo');
+        }, 750, 'easeInOutExpo');
 
         if ($(this).parents('.main-nav, .mobile-nav').length) {
           $('.main-nav .active, .mobile-nav .active').removeClass('active');
